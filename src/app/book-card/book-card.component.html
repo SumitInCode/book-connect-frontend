@@ -1,10 +1,22 @@
-<div class="book-card-container">
-  <mat-card class="book-card" appearance="outlined">
-    <img mat-card-image src="https://img.freepik.com/free-psd/world-forest-day-poster-template_23-2148899237.jpg?t=st=1736766867~exp=1736770467~hmac=d7e3bf96d83b1079ca23f501d1725a0dbcd27a9a928ee1ddd56b2bb56c512362&w=1380" alt="Book Cover">
-    <mat-card-title>God of War</mat-card-title>
-    <span class="book-genre">[Fantasy, Adventure, Adventure, ...]</span>
-    <mat-card-content>
-      <p><span class="book-details">Author: </span>Sumit Kumar</p>
-    </mat-card-content>
-  </mat-card>
+<div class="font-[sans-serif] bg-white p-4 mx-auto max-w-[1400px]">
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+      @for(item of items; track item) {
+        <div class="group overflow-hidden cursor-pointer relative">
+          <div class="bg-gray-100 w-full overflow-hidden">
+            <img
+              src="https://i.ibb.co/60Yx1WN/Elegant-Dark-Woods-Fantasy-Photo-Book-Cover.jpg"
+              alt="Book"
+              class="aspect-[2.5/4] w-full object-cover object-top hover:scale-110 transition-all duration-700"
+            />
+          </div>
+
+          <div class="py-2 px-1 relative">
+            <div class="z-20 bg-white">
+              <p class="text-base font-semibold text-gray-800 truncate">Walk into the shadow</p>
+              <p class="text-sm text-gray-600 italic"> Sumit Kumar</p>
+            </div>
+          </div>
+        </div>
+      }
+  </div>
 </div>

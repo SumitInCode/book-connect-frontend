@@ -10,5 +10,15 @@ import {MatCardModule} from '@angular/material/card';
   styleUrl: './book-card.component.css'
 })
 export class BookCardComponent {
-
+  items = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ]
 }
