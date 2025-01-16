@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">book-connect-frontend</string>
+    <string name="title_activity_main">book-connect-frontend</string>
+    <string name="package_name">com.ssuamkiett.bookconnect</string>
+    <string name="custom_url_scheme">com.ssuamkiett.bookconnect</string>
+</resources>

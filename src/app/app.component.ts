@@ -8,7 +8,7 @@ import {BookCardComponent} from './book-card/book-card.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, LoginComponent, RegisterComponent, BookDetailsComponent, BookCardComponent],
+  imports: [RouterOutlet, BookDetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
