@@ -5,6 +5,7 @@ import {BookCardComponent} from '../book-card/book-card.component';
 import {MatIcon} from '@angular/material/icon';
 import {MatNavList} from '@angular/material/list';
 import {MatButton, MatIconButton} from '@angular/material/button';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -15,11 +16,17 @@ import {MatButton, MatIconButton} from '@angular/material/button';
     MatIcon,
     MatNavList,
     MatButton,
-    MatIconButton
+    MatIconButton,
+    NgClass,
+    MatIconButton,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  menuOpen = false;
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

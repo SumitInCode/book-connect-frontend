@@ -1,27 +1,48 @@
-<mat-toolbar color="primary" >
-  <div class="spacer">
-    <button mat-icon-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </div>
-  <div class="spacer">
-    <mat-icon>auto_stories</mat-icon>
-    <span style="margin-left: 10px">BookConnect</span>
-  </div>
-  <div class="button-container">
-    <button mat-flat-button class="button-radius">Login</button>
-  </div>
-</mat-toolbar>
+<header class="flex py-4 px-4 sm:px-10 font-[sans-serif] min-h-[70px] tracking-wide relative z-50">
+  <div class="flex flex-wrap items-center justify-between gap-4 w-full">
+    <div class="lg:absolute max-lg:left-10 lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2 max-sm:hidden">
+      <img src="https://readymadeui.com/readymadeui.svg" alt="logo" class="w-36" />
+    </div>
+    <div class="hidden max-sm:block">
+      <img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" class="w-9" />
+    </div>
+    <div id="collapseMenu" class="max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50 " [ngClass]="{'block': menuOpen, 'hidden': !menuOpen}">
+      <ul class="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+        <li class="mb-6 hidden max-lg:block">
+          <img src="https://readymadeui.com/readymadeui.svg" alt="logo" class="w-36" />
+          <button
+            id="toggleClose"
+            class="lg:hidden absolute top-4 right-4 z-50 w-9 h-9 flex items-center justify-center rounded-full"
+            (click)="toggleMenu()"
+          >
+            <mat-icon class="text-black">close</mat-icon>
+          </button>
+        </li>
+        <li class="max-lg:border-b max-lg:py-3 px-3">
+          <a href="javascript:void(0)" class="hover:text-[#007bff] block font-semibold text-[18px]">HOME</a>
+        </li>
+        <li class="max-lg:border-b max-lg:py-3 px-3">
+          <a href="javascript:void(0)" class="hover:text-[#007bff]  block font-semibold text-[18px]">LIBRARY</a>
+        </li>
+        <li class="max-lg:border-b max-lg:py-3 px-3">
+          <a href="javascript:void(0)" class="hover:text-[#007bff] block font-semibold text-[18px]">BOOKSHELF</a>
+        </li>
+        <li class="max-lg:border-b max-lg:py-3 px-3">
+          <a href="javascript:void(0)" class="hover:text-[#007bff] block font-semibold text-[18px]">REQUEST A BOOK</a>
+        </li>
+      </ul>
+    </div>
 
+    <div class="flex items-center ml-auto space-x-6">
+      <button class="px-4 py-2 text-lg rounded-lg font-bold text-white bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-blue-500">
+        Get Started
+      </button>
 
-<mat-sidenav-container>
-  <mat-sidenav #drawer mode="over">
-    <mat-nav-list>
-      <span class="text-button">Library</span>
-      <span class="text-button">BookShelf</span>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <app-book-card></app-book-card>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      <button id="toggleOpen" class="lg:hidden" (click)="toggleMenu()">
+        <svg class="w-7 h-7" fill="#333" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
