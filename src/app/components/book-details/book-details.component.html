@@ -3,18 +3,17 @@
     <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-8 max-lg:gap-12 max-sm:gap-8">
       <div class="lg:py-8">
         <div class="justify-center">
-          <img [src]="book.bookCover"
-               class=" aspect-[2.8/4] object-cover rounded-lg" />
+          <img [src]="book().bookCover" class=" aspect-[2.8/4] object-cover rounded-lg"/>
         </div>
       </div>
       <div class="w-full lg:py-8">
         <div>
-          <h3 class="font-[Cormorant] lg:text-5xl text-3xl font-bold text-gray-800">{{ book.id }}</h3>
-          <span class="font-[Cormorant] text-gray-500 mt-1 text-xl italic">{{ book.authorName }}</span>
+          <h3 class="font-[Cormorant] lg:text-5xl text-3xl font-bold text-gray-800">{{ book().id }}</h3>
+          <span class="font-[Cormorant] text-gray-500 mt-1 text-xl italic">{{ book().authorName }}</span>
 
           <div class="flex items-center gap-4 mt-2">
             <div class="flex items-center gap-1 text-lg px-2.5 bg-green-600 text-white rounded-full">
-              <p>{{ book.rate }}</p>
+              <p>{{ book().rate }}</p>
               <svg class="w-[13px] h-[13px] fill-white" viewBox="0 0 14 13" fill="none"
                    xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -41,9 +40,9 @@
         <div>
           <h3 class="text-2xl font-bold text-gray-800">BOOK DETAILS</h3>
           <div class="pl-2 mt-2">
-            <p class="mt-1"><span class="font-semibold text-lg">ISBN: </span>{{ book.isbn }}</p>
-            <p class="mt-1"><span class="font-semibold text-lg">Genre: </span>{{ book.genre }}</p>
-            <p class="mt-1"><span class="font-semibold text-lg">Synopsis: </span>{{ book.synopsis }}</p>
+            <p class="mt-1"><span class="font-semibold text-lg">ISBN: </span>{{ book().isbn }}</p>
+            <p class="mt-1"><span class="font-semibold text-lg">Genre: </span>{{ book().genre }}</p>
+            <p class="mt-1"><span class="font-semibold text-lg">Synopsis: </span>{{ book().synopsis }}</p>
           </div>
         </div>
     </div>
