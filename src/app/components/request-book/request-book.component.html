@@ -8,8 +8,10 @@
 
 
   <button type="button"
-          class="!mt-8 w-full px-4 py-2.5 mx-auto block text-sm bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
-  <div id="message" class="block mt-4 p-4 bg-white shadow-lg rounded-lg text-center text-sm text-green-500 border border-green-300">
-    Your request is submitted!
-  </div>
+          class="!mt-8 w-full px-4 py-2.5 mx-auto block text-sm bg-blue-500 text-white rounded hover:bg-blue-600" (click)="handleBookRequest()">Submit</button>
+  @if(showMessage) {
+    <div id="message" class="block mt-4 p-4 bg-white shadow-lg rounded-lg text-center text-sm text-green-500 border border-green-300">
+      Your request is submitted!
+    </div>
+  }
 </form>

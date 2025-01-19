@@ -1,24 +1,17 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import {Book} from '../../models/book.model';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-book-card',
   imports: [
-    MatCardModule
+    MatCardModule,
+    RouterLink
   ],
   templateUrl: './book-card.component.html',
   styleUrl: './book-card.component.css'
 })
 export class BookCardComponent {
-  items = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ]
+  @Input() books: Book[] = [];
 }
