@@ -1,0 +1,18 @@
+<div class="font-sans p-4 mx-auto lg:max-w-6xl md:max-w-4xl">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 rounded-lg">
+    @for(book of books; track book) {
+      <div [routerLink]="['book', book.id]" class="bg-white flex flex-col rounded overflow-hidden shadow-md cursor-pointer hover:scale-[1.01] transition-all">
+        <div class="w-full">
+          <img [src]="book.bookCover" class="w-full object-fit object-top aspect-[2.8/4] rounded-lg" />
+        </div>
+
+        <div class="pt-2 flex-1 flex flex-col">
+          <div class="flex-1 text-center">
+            <h5 class="font-[Cormorant] lg:text-xl sm:text-base md:text-lg font-bold text-gray-800 line-clamp-2">{{ book.title }}</h5>
+            <h6 class="font-[Cormorant] lg:text-lg sm:text-sm  md:text-base italic text-gray-800">{{ book.authorName }}</h6>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
