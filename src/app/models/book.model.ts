@@ -1,12 +1,18 @@
-export interface Book {
+// Base interface with common properties
+export interface BookBase {
   id: number;
   title: string;
   authorName: string;
-  isbn: string;
-  synopsis: string;
   bookCover: string;
   genre: string;
-  archived: boolean;
-  shareable: boolean;
   rate: number;
 }
+
+export interface Book extends BookBase {
+  isbn: string;
+  synopsis: string;
+  archived: boolean;
+  shareable: boolean;
+}
+
+export interface BookMinimal extends BookBase {}

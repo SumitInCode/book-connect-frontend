@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
-import {Book} from '../../models/book.model';
+import {Book, BookMinimal} from '../../models/book.model';
 import {RouterLink} from '@angular/router';
 
 @Component({
@@ -13,5 +13,5 @@ import {RouterLink} from '@angular/router';
   styleUrl: './book-card.component.css'
 })
 export class BookCardComponent {
-  @Input() books: Book[] = [];
+  @Input() books: BookMinimal[] = [];
 }

@@ -1,7 +1,7 @@
 <div class="font-sans p-4 mx-auto lg:max-w-6xl md:max-w-4xl">
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 rounded-lg">
     @for(book of books; track book) {
-      <div [routerLink]="['book', book.id]" class="bg-white flex flex-col rounded overflow-hidden shadow-md cursor-pointer hover:scale-[1.01] transition-all">
+      <div [routerLink]="['/book', book.id]" class="bg-white flex flex-col rounded overflow-hidden shadow-md cursor-pointer hover:scale-[1.01] transition-all">
         <div class="w-full">
           <img [src]="book.bookCover" class="w-full object-fit object-top aspect-[2.8/4] rounded-lg" />
         </div>

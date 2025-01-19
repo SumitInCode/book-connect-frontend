@@ -9,9 +9,10 @@ import {BookShelfComponent} from './components/book-shelf/book-shelf.component';
 import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
+  {path: '', component: HomepageComponent},
   {path: 'home', component: HomepageComponent},
   {path: 'library', component: LibraryComponent},
-  {path: 'book/:id', component: BookDetailsComponent},
+  {path: 'book/:bookId', component: BookDetailsComponent},
   {path: 'signup', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'request-book', component: RequestBookComponent},
