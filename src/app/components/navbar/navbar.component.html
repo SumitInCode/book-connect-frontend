@@ -3,7 +3,7 @@
     <div class="lg:absolute max-lg:left-10 lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2 max-sm:hidden">
       <div class="flex items-center cursor-pointer">
         <mat-icon class="mr-2">auto_stories</mat-icon>
-        <span [routerLink]="['/home']" class="text:lg font-[Cormorant]">BookConnect</span>
+        <span [routerLink]="['/home']" class="text:2xl font-[Cormorant]">BookConnect</span>
       </div>
 
     </div>
@@ -15,7 +15,7 @@
         <li class="mb-6 hidden max-lg:block">
           <div [routerLink]="['/home']" class="flex items-center cursor-pointer">
             <mat-icon class="mr-2">auto_stories</mat-icon>
-            <span class="text-lg font-[Cormorant]">BookConnect</span>
+            <span class="text-2xl font-[Cormorant]">BookConnect</span>
           </div>
           <button
             id="toggleClose"
@@ -41,10 +41,9 @@
     </div>
 
     <div class="flex items-center ml-auto space-x-6">
-      <button class="px-4 py-2 text-sm rounded-lg  text-white bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-blue-500" (click)="getStarted()">
-        Get Started
+      <button class="px-4 py-2 text-sm rounded-lg  text-white bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-blue-500" (click)="handleGetStartedLogout()">
+        {{ isLogined ? 'Logout' : 'Get Started' }}
       </button>
-
       <button id="toggleOpen" class="lg:hidden" (click)="toggleMenu()">
         <mat-icon>menu</mat-icon>
       </button>

@@ -2,8 +2,9 @@ import {Component, inject, OnInit} from '@angular/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
-import {NgClass} from '@angular/common';
+import {CommonModule, NgClass} from '@angular/common';
 import {NavigationStart, Router, RouterLink} from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,12 +14,15 @@ import {NavigationStart, Router, RouterLink} from '@angular/router';
     MatIcon,
     NgClass,
     RouterLink,
+    CommonModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit {
   private router = inject(Router);
+  private authService = inject(AuthService);
+  isLogined = false;
   isMenuOpen = false;
 
   ngOnInit() {
@@ -29,13 +33,26 @@ export class NavbarComponent implements OnInit {
         }
       }
     });
+
+    this.authService.isLoggedIn$.subscribe(data => {
+      this.isLogined = data;
+    });
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  getStarted() {
+  handleGetStartedLogout() {
+    if(this.isLogined) {
+      this.logout();
+      return;
+    }
     this.router.navigate(['/login'])
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }

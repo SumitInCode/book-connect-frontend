@@ -11,7 +11,7 @@ import {SearchbarComponent} from './components/searchbar/searchbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, BookDetailsComponent, BookCardComponent, NavbarComponent, RequestBookComponent, HomepageComponent, SearchbarComponent],
+  imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
